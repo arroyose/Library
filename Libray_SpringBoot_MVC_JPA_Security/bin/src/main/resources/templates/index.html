@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html  xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<title>My Library</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="/resources/css/main.css" />
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="#">MyLibrary</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a th:href="@{/index}">Home</a></li>
+					<li><a th:href="@{/login}">Login</a></li>
+					<li><a href="#"></a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h1>MyLibrary</h1>
+					<p>Mi Biblioteca privada, By Eduardo Arroyo.</p>
+				</div>
+			</section>
+		 
+		<!-- Highlights -->
+			<section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						<h2>All My BOOKS</h2>
+					</header>
+					<!-- <div class="highlights">
+						<section th:each="book : ${bookList}">
+							<div class="content">
+									<a href="#" class="icon fa-book"><span class="label"><p th:text="${book.id_book}"></p></span></a>
+									<h3 th:text="${book.name}"></h3>
+								<p th:text="${book.isbn}"></p>
+							</div>
+						</section>
+					</div>-->
+					<div class="bookDiv">
+						<div class="container" th:each="book : ${bookList}">
+							<div class="singleBookDiv">
+									<a href="#" class="icon fa-book bigIcon"><span class="label"><p th:text="${book.id_book}"></p></span></a>
+									<h3 th:text="${book.name}"></h3>
+								<p th:text="${book.isbn}"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="content">
+						<section>
+							<h3>GENERAL INFO</h3>
+							<p>There is my personal library.</p>
+						</section>
+						<section>
+							<h4>Links</h4>
+							<ul class="alt">
+								<li><a href="#">The best books in the word.</a></li>
+								<li><a href="#">Other interst link.</a></li>
+								<li><a href="#">New links.</a></li>
+							</ul>
+						</section>
+						<section>
+							<h4>Contact</h4>
+							<ul class="plain">
+								<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+								<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+								<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+								<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+							</ul>
+						</section>
+					</div>
+					<div class="copyright">
+						&copy; MyLibrary, BY <a href="">arroyoe</a>.
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/resources/js/jquery.min.js"></script>
+			<script src="/resources/js/browser.min.js"></script>
+			<script src="/resources/js/breakpoints.min.js"></script>
+			<script src="/resources/js/util.js"></script>
+			<script src="/resources/js/main.js"></script>
+
+	</body>
+</html>

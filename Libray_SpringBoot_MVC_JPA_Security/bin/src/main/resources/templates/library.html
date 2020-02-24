@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>My Library</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="/resources/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="#">MyLibrary</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="library.html">Home</a></li>
+					<li><a href="#">Libros</a></li>
+					<li><a href="#"></a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h1>MyLibrary</h1>
+					<p>Mi Biblioteca privada <a href="#">Arroyoe</a> By Eduardo Arroyo.</p>
+				</div>
+				<video autoplay loop muted playsinline src="/resources/images/banner.mp4"></video>
+			</section>
+
+		<!-- Highlights -->
+			<section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						<h2>All My BOOKS</h2>
+						<p>This is my list of my personal books.</p>
+					</header>
+					<div class="highlights">
+						<section>
+							<div class="content">
+									<a href="#" class="icon fa-book"><span class="label">Icon</span></a>
+									<h3>Feugiat consequat</h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+					</div>
+				</div>
+			</section>
+
+		<!-- CTA -->
+			<section id="cta" class="wrapper">
+				<div class="inner">
+					<h2>Curabitur ullamcorper ultricies</h2>
+					<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
+				</div>
+			</section>
+
+		<section class="wrapper">
+		<div id="contenedor">
+		<h2>
+			Añadir nuevos libros
+		</h2>
+		<form 
+				method="post" 
+				th:object="${book}"
+				th:action="@{/addBook}">
+			<table>
+				<tr>
+					<td><label for="nombre">Nombre</label></td>
+					<td><input type="text" th:field="*{nombre}" /></td>
+				</tr>
+				<tr>
+					<td><label for="autor">Autor</label></td>
+					<td><input type="text" th:field="*{author}" /></td>
+				</tr>
+				<tr>
+					<td><label for="isbn">ISBN</label></td>
+					<td><input type="text" th:field="*{isbn}" /></td>
+				</tr>
+			</table>
+			<br />
+			<p>
+				<input type="submit" value="Dar de alta" />
+			</p>
+		</form>
+	</div>
+		</section>
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="content">
+						<section>
+							<h3>GENERAL INFO</h3>
+							<p>There is my personal library.</p>
+						</section>
+						<section>
+							<h4>Links</h4>
+							<ul class="alt">
+								<li><a href="#">The best books in the word.</a></li>
+								<li><a href="#">Other interst link.</a></li>
+								<li><a href="#">New links.</a></li>
+							</ul>
+						</section>
+						<section>
+							<h4>Contact</h4>
+							<ul class="plain">
+								<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+								<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+								<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+								<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+							</ul>
+						</section>
+					</div>
+					<div class="copyright">
+						&copy; MyLibrary, BY <a href="">arroyoe</a>.
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/resources/js/jquery.min.js"></script>
+			<script src="/resources/js/browser.min.js"></script>
+			<script src="/resources/js/breakpoints.min.js"></script>
+			<script src="/resources/js/util.js"></script>
+			<script src="/resources/js/main.js"></script>
+
+	</body>
+</html>
